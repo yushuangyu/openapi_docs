@@ -45,8 +45,8 @@ BillList:
 | -------- | ----- | ----- |
 | items | [BillListDetail](#billListDetail) | 收支明细数据列表 |
 | total | int64 | 总条目数 |
-| in | float | 总入账金额（单位为元，保留小数点后三位） |
-| out | float | 总出账金额（单位为元，保留小数点后三位） |
+| in | float | 总入账金额（单位元，精确到小数点后5位） |
+| out | float | 总出账金额（单位元，精确到小数点后5位） |
 
 <span id="billListDetail"></span>
 BillListDetail:
@@ -56,7 +56,7 @@ BillListDetail:
 | createTime | int64 | 数据创建时间，取毫秒为单位的unix_timestamp |
 | tradeType | string | 交易类型，取值列表如[TradeType](#tradeType)所示 |
 | describe | string | 交易记录中文表示 |
-| amount | float | 收支金额，正数为入账，负数为出账（单位为元，保留小数点后三位） |
+| amount | float | 收支金额，正数为入账，负数为出账（单位元，精确到小数点后5位） |
 | recordId | int64 | 交易记录的id |
 | status | int16 | 状态值，0为初始值，1为已结算 |
 

@@ -66,7 +66,7 @@ ConsumeList:
 | -------- | ----- | ----- |
 | items | [ConsumeListDetail](#consumeListDetail) | 消费信息数据列表 |
 | total | int64 | 总条目数 |
-| totalValue | float | 总消费金额（单位为元，保留小数点后三位） |
+| totalValue | float | 总消费金额（单位元，精确到小数点后5位） |
 
 <span id="consumeListDetail"></span>
 ConsumeListDetail:
@@ -79,7 +79,7 @@ ConsumeListDetail:
 |subResourceType|string|子资源类型|
 |subResourceTypeInCh|string|子资源类型中文描述|
 |description|string|此条消费记录的中文描述|
-|value|float|实际支付（单位为元，保留小数点后三位）|
+|value|float|实际支付（单位元，精确到小数点后5位）|
 |resourceUuid|string|资源的uuid|
 |resourceTag|[]string|资源的标签|
 |regionId|string|地区id|
@@ -124,7 +124,7 @@ curl -X POST \
                 "subResourceType": "dc2.ebs",
                 "subResourceTypeInCh": "通用型云服务器",
                 "description": "通用型云服务器 10.255.1.59(内) | 1CPU-2GMEM",
-                "value": "34.20",
+                "value": 34.20,
                 "resourceUuid": "d487897840ab5da3a171323d34dc1e4c",
                 "resourceTag": [],
                 "regionId": "gz",
@@ -134,7 +134,7 @@ curl -X POST \
             }
         ],
         "total": 1,
-        "totalValue": "34.2"
+        "totalValue": 34.2
     }
 }
 ```

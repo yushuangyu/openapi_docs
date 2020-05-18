@@ -53,7 +53,7 @@ UsageList:
 | -------- | ----- | ----- |
 | items | [UsageListDetail](#usageListDetail) | 消费信息数据列表 |
 | total | int64 | 总条目数 |
-| totalValue | float | 总消费金额（单位为元，保留小数点后三位） |
+| totalValue | float | 总消费金额（单位元，精确到小数点后5位） |
 
 <span id="usageListDetail"></span>
 UsageListDetail:
